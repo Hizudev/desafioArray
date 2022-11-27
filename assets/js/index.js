@@ -39,13 +39,13 @@ searchButton.addEventListener("click", () => {
   const metterU = parseInt(document.querySelector("#metterU").value);
 
   if (isNaN(rooms) || isNaN(metterS) || isNaN(metterU)) {
-    alert("Solo se aceptan numeros");
+    alert("No se aceptan campos en blanco ni letras, Solo se aceptan números");
     return;
   } else if (rooms <= 0 || metterS <= 0 || metterU <= 0) {
     alert("valor minimo: 1");
     return;
   } else if (metterS > metterU) {
-    alert("El valor 'desde' no puede ser mayor al valor 'hasta'");
+    alert("El valor 'desde' no puede ser mayor que el valor 'hasta'");
     return;
   }
 
@@ -57,7 +57,7 @@ searchButton.addEventListener("click", () => {
   });
 
   if (filteredPropieties.length === 0) {
-    alert("Ninguna propiedad coinside con los parametros de busqueda");
+    alert("Ninguna propiedad coincide con los parámetros de búsqueda");
     return;
   }
 
