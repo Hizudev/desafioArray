@@ -39,13 +39,13 @@ searchButton.addEventListener("click", () => {
   const metterU = parseInt(document.querySelector("#metterU").value);
 
   if (isNaN(rooms) || isNaN(metterS) || isNaN(metterU)) {
-    alert("solo numbers kbrom");
+    alert("Solo se aceptan numeros");
     return;
   } else if (rooms <= 0 || metterS <= 0 || metterU <= 0) {
     alert("valor minimo: 1");
     return;
   } else if (metterS > metterU) {
-    alert("Amigo ta volao");
+    alert("El valor 'desde' no puede ser mayor al valor 'hasta'");
     return;
   }
 
